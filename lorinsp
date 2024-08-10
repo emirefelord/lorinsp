@@ -1,0 +1,20 @@
+local player = game.Players.LocalPlayer
+local screenGui = Instance.new("ScreenGui")
+screenGui.Name = "UIExecutor"
+screenGui.Parent = player.PlayerGui
+
+-- Create a simple button
+local button = Instance.new("TextButton")
+button.Size = UDim2.new(0, 200, 0, 50)
+button.Position = UDim2.new(0.5, -100, 0.5, -25)
+button.Text = "Click ui Executor!"
+button.Parent = screenGui
+
+-- Create a function to execute when the button is clicked
+local function onButtonClick()
+    print("Button was clicked!")
+    -- Add any additional functionality here
+end
+
+-- Connect the button click event to the function
+button.MouseButton1Click:Connect(onButtonClick)
